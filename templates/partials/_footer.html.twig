@@ -1,0 +1,70 @@
+<footer>
+<div class="footer-top">
+    <div class="footer-container">
+
+        <div class="row">
+            <img src="{{ asset('images/logos/ball_circus.svg')}}" alt="logo_site">
+            <p class="footer-text" id="footer-text">Thomas est un artiste jongleur niçois 
+            travaillant principalement sur la côte d'azur et dans le monde entier</p>
+            <p class="footer-follow">Suivez-moi</p>
+            <div class="footer-socials">
+                <i class="fa-brands fa-square-facebook fa-xl"></i>
+                <i class="fa-brands fa-square-instagram fa-xl"></i>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p class="footer-title">Accès rapide</p>
+                <a  href="{{ path('app_presta')}}" class="footer-text">Prestations</a>
+                <a  href="{{ path('app_references')}}" class="footer-text">Références</a>
+                <a  href="{{ path('app_gallerie')}}" class="footer-text">Galerie</a>
+                <a  href="{{ path('app_contact')}}" class="footer-text">Contact</a>
+            </div>
+            <div class="col">
+                <p class="footer-title">Localisation</p>
+                <p class="footer-text">Nice</p>
+                <p class="footer-text">Cannes</p>
+                <p class="footer-text">Monaco</p>
+                <p class="footer-text">Saint Tropez</p>
+                <p class="footer-text">Menton</p>
+                <p class="footer-text">Côte d'azur</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="footer-title">Contactez-moi</p>
+                <div class="footer-mailtel">
+                <div class="footer-mail">
+                    <i class="fa-solid fa-phone fa"></i>
+                    <a href="tel:+33783894676">+33 (0)7 83 89 46 76</a>
+                </div>
+                <div class="footer-tel">
+                    <i class="fa-solid fa-envelope fa"></i>
+                    <a href="">thomas.lasne@gmail.com</a>
+                </div>
+                </div>
+                <a href="{{ path('app_devis') }}"><div class="footer-btn">
+                    <span class="footer-btn-devis">Devis</span>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </div></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-bottom">
+    <div class="footer-logo">
+        <a class="footer-title" href="{{path('app_home')}}">
+            <img src="{{ asset('images/logos/ball_circus.svg')}}" alt="logo_site">
+            <span class="footer-title-1">Thomas</span>
+        </a>
+    </div>
+    <div class="footer-content">
+        <p class="footer-text">Copyright @ 2023 Jordan Liautaud</p>
+        <p class="footer-text" id="hide">-</p>
+        <p class="footer-text">Tous droit<a class="hide" href="{{path('app_login')}}">s</a> réservés</p>
+        <p class="footer-text">-</p>
+        <a href="" class="footer-text">Mentions légales</a>
+    </div>
+</div>
+</footer>

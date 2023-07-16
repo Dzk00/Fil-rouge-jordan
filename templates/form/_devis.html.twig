@@ -1,0 +1,54 @@
+<div class="devis-container">
+{{ form_start(form) }}
+            <div class="devis-infop" id="infop-1">
+ {{ form_label(form.type) }}
+<div class="infop-2">
+    <div class="div-gap">
+        {{ form_row(form.type[0]) }}
+    </div>
+    <div class="div-gap">
+        {{ form_row(form.type[1]) }}
+    </div>
+    <div class="div-gap">
+        {{ form_row(form.type[2]) }}
+    </div>
+</div>
+
+            </div>
+                <div class="devis-infop">
+                    {{ form_label(form.name) }}
+                    {{ form_widget(form.name) }}
+                </div>
+            <div class="devis-infop-container">
+                <div class="devis-infop">
+                    {{ form_label(form.email) }}
+                    {{ form_widget(form.email) }}                
+                </div>
+                <div class="devis-infop">
+                    {{ form_label(form.telephone) }}
+                    {{ form_widget(form.telephone) }}
+                </div>
+            </div>
+            <div class="devis-infop-container">
+                <div class="devis-infop">
+                    {{ form_label(form.evenement) }}
+                    {{ form_widget(form.evenement) }}
+                </div>
+                <div class="devis-infop">
+                    {{ form_label(form.date) }}
+                    {{ form_widget(form.date) }}
+                </div>
+            </div>
+              <div class="devis-infop">
+                    {{ form_label(form.informationsSupplementaires) }}
+                    {{ form_widget(form.informationsSupplementaires) }}
+                </div>
+                            <div class="devis-consentement">
+                {{ form_label(form.consentement) }}
+                    {{ form_widget(form.consentement) }}
+            </div>
+            <div class="form-btn-submit-container">
+                <button type="submit" class="form-btn-submit">Soumettre</button>
+            </div>
+    </form>
+</div>

@@ -1,0 +1,31 @@
+.medias-video-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .medias-video-main iframe {
+    height: 50vh;
+    width: 60vw;
+  }
+
+  .medias-video-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .medias-video-main iframe {
+      height: 50vh;
+      width: 80vw;
+    }
+    .medias-video-content iframe{
+      height: 50vh;
+      width: 80vw;
+    }
+}

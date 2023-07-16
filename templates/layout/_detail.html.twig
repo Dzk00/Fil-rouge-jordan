@@ -1,0 +1,21 @@
+{# {{ dump(prestation) }} #}
+
+<h2 class="home-title-1">{{ prestation.nom }}</h2>
+<div class="detail-img-position">
+    <div class="detail-img-container">
+        <img src="{{ asset('images/presta/' ~ prestation.imageName) }}" alt="image_">
+    </div>
+</div>
+<div class="detail-text">
+    <p>{{ prestation.description1 }}</p>
+    <p>{{ prestation.description2 }}</p>
+    <p>{{ prestation.description3 }}</p>
+</div>
+<div class="detail-btn-container">
+    <a href="{{ path('app_devis') }}">
+        <div class="detail-btn">
+            <i class="fa-regular fa-paper-plane"></i>
+            <span class="detail-btn-devis">Devis</span>
+        </div>
+    </a>
+</div>

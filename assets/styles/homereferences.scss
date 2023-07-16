@@ -1,0 +1,64 @@
+@import '_variables.scss';
+
+.home-ref-container{
+    background: $bg-test;
+    padding: 5rem;
+    margin: 5rem;
+    border-radius: 20px;
+}
+.home-ref-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.hidden-images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.home-ref-img img{
+    height: 20rem;
+    width: 25rem;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 14px -4px $color-primary-2; 
+    box-shadow: 0px 0px 14px -4px $black; 
+}
+
+.show-more-button{
+    visibility: hidden;
+    height: 6rem;
+    width: 18rem;
+    border: 1px solid $color-primary-1;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $text-color;
+    -webkit-box-shadow: 0px 0px 5px -4px $color-primary-1; 
+    box-shadow: 0px 0px 10px -4px $color-primary-1;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+}
+.show-more-button:hover{
+    background: $color-primary-1;
+    color: $white;
+    transform: scale(1.1);
+}
+  
+  @media screen and (max-width: 650px) {
+    .home-ref-img {
+      overflow: hidden;
+    }
+  
+    .show-more-button {
+      visibility: visible;
+    }
+  
+    .hidden-images {
+      display: none;
+    }
+  }
+  

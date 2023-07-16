@@ -1,0 +1,101 @@
+@import '_variables.scss';
+
+.home-contact-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    gap: 3rem;
+    font-size: 1.9rem;
+    color: $text-color;
+    padding: 3rem 4rem;
+}
+
+.home-contact-text p::first-letter{
+    font-size: 2.2rem;
+    color: $color-primary-2;
+    font-weight: 700;
+}
+
+.home-form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+}
+.home-form-container form{
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    -webkit-box-shadow: 0px 0px 14px -4px $black; 
+    box-shadow: 0px 0px 14px -4px $black;    border-radius: 20px;
+}
+.home-form-title{
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: $color-primary-1;
+}
+.home-form-group{
+    display: flex;
+    flex-direction: column;
+}
+.home-form-group label{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.home-form-group input{
+    height: 4rem;
+    width: 70rem;
+    border-radius: 20px;
+    border: 1px solid grey;
+    padding: 1rem;
+}
+.home-form-group textarea{
+    height: 15rem;
+    width: 70rem;
+    border-radius: 20px;
+    border: 1px solid grey;
+    padding: 1rem;
+}
+.form-btn-submit-container{
+    display: flex;
+    justify-content: center;
+}
+.form-btn-submit{
+    height: 6rem;
+    width: 18rem;
+    border: 1px solid $color-primary-1;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $text-color;
+    -webkit-box-shadow: 0px 0px 5px -4px $color-primary-1; 
+    box-shadow: 0px 0px 10px -4px $color-primary-1;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+}
+.form-btn-submit:hover{
+    background: $color-primary-1;
+    color: $white;
+    transform: scale(1.1);
+}
+ @media screen and (max-width: 830px) {
+    .home-form-group input{
+        width: 35rem;
+    }
+    .home-form-group textarea{
+        width: 35rem;
+    }
+ }
+ @media screen and (max-width: 490px) {
+    .home-form-group input{
+        width: 55vw;
+    }
+    .home-form-group textarea{
+        width: 55vw;
+    }
+ }

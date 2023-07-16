@@ -1,0 +1,47 @@
+        <header>
+            <div class="socials-content">
+                <div class="tel-mail">
+                    <div class="tel">
+                        <i class="fa-solid fa-phone fa"></i>
+                        <a href="tel:+33783894676">+33 (0)7 83 89 46 76</a>
+                    </div>
+                    <div class="mail">
+                        <i class="fa-solid fa-envelope fa"></i>
+                        <a href="">thomas.lasne@gmail.com</a>
+                    </div>
+                </div>
+                <div class="socials">
+                    <i class="fa-brands fa-square-facebook fa-xl"></i>
+                    <i class="fa-brands fa-square-instagram fa-xl"></i>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <div class="nav-container">
+                    <div class="nav-logo">
+                        <a href="{{ path('app_home') }}"class="nav-title">
+                            <img src="{{ asset('images/logos/ball_circus.svg')}}" alt="logo_site">
+                            <span class="nav-title-1">Thomas</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-link">
+                        <div class="nav-content">
+                            <a href="{{ path('app_presta')}}" class="nav-bar">Prestations</a>
+                            <a href="{{ path('app_gallerie')}}" class="nav-bar">Galerie</a>
+                            <a href="{{ path('app_references')}}" class="nav-bar">Références</a>
+                            <a href="{{ path('app_contact')}}" class="nav-bar">Contact</a>
+                        </div>
+                        <a href="{{ path('app_devis') }}"><div class="nav-btn">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        <span class="nav-btn-devis">Devis</span>
+                        </div></a>
+                    </div>
+                    <div class="menu-btn" id="toggleBtn2">
+                    <span class="menu-title" id="menuText">Menu</span>
+                    <div class="menu-style" id="toggleBtn"></div>
+                    </div>
+                </div>
+                {{ include('components/_sidemenu.html.twig') }}
+            </nav>
+        </header>

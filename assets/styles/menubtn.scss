@@ -1,0 +1,78 @@
+@import '_variables.scss';
+
+.menu-btn{
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    z-index: 11;
+}
+@media screen and (max-width: 1300px) {
+    .menu-btn{
+        display: flex;
+    }
+}
+.menu-btn:hover{
+    color: $black-hover;
+}
+.menu-btn:hover .menu-style::after{
+    background: $black-hover;
+}
+.menu-btn:hover .menu-style::before{
+    background: $black-hover;
+    box-shadow: 0 8px 0 $black-hover;
+}
+.menu-title{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    transition: 0.2s ease;
+}
+@media screen and (max-width: 490px) {
+    .menu-title{
+        display: none;
+    }
+}
+.menu-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+}
+
+.menu-style::before{
+    content:'';
+    position: absolute;
+    width: 2rem;
+    height: 0.4rem;
+    background: $black;
+    transform: translateY(-8px);
+    border-radius: 3px;
+    box-shadow: 0 8px 0 $black;
+    transition: .3s ease-in-out;
+}
+.menu-style.activeToggle::before{
+    transform: translateY(0) rotate(585deg);
+    box-shadow: 0 0 0 black;
+    background: black;
+}
+.menu-btn:hover .menu-style.activeToggle::before{
+    box-shadow: 0 0 0 rgb(255, 255, 255);
+}
+.menu-style::after{
+    content:'';
+    position: absolute;
+    width: 2rem;
+    height: 0.4rem;
+    border-radius: 3px;
+    background: black;
+    transform: translateY(8px);
+    transition: .3s ease-in-out;
+}
+.menu-style.activeToggle::after{
+    transform: translateY(0) rotate(-585deg);
+    background: black;
+}

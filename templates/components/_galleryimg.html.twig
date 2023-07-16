@@ -1,0 +1,12 @@
+<div class="gallery-container">
+{% for img in imgs %}
+<div class="image-container">
+<img src="{{ asset('images/gallery/' ~ img.imageName) }}" alt="thomaslasnejongleurimage">
+</div>
+{% endfor %}
+</div>
+
+<div class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" src="" alt="">
+</div>

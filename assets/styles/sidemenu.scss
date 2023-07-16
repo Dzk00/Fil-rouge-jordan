@@ -1,0 +1,157 @@
+@import '_variables.scss';
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background: $color-primary-7;
+    transition: left 0.3s ease;
+    z-index: 10;
+  }
+  
+  .side-menu.active {
+    left: 0;
+  }
+
+  .sidemenu-nav{
+    height: 100vh;
+    width: 100vw;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .sm-nav-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
+.sm-nav-bar{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.756);
+    transition: 0.2s ease;
+}
+.sm-nav-bar:hover{
+    color: $color-primary-0;
+    font-weight: 900;
+}
+.sm-nav-btn{
+    background: $color-primary-1;
+    height: 6rem;
+    width: 18rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.sm-nav-btn i{
+    color: $white;
+    font-size: 2rem;
+}
+.sm-nav-btn-devis{
+    font-size: 2rem;
+    font-weight: 800;
+    color: $white;
+}
+.sm-nav-btn:hover{
+    background: $color-primary-2;
+}
+.sm-tel-mail{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.sm-tel-mail i{
+    font-size: 2rem;
+}
+.sm-tel-mail span{
+    font-size: 2rem;
+}
+.sm-tel, .sm-mail{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+@media screen and (max-width: 400px) {
+    .sm-tel{
+        background: $color-primary-0;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        transition: 0.2s ease;
+        cursor: pointer;
+    }
+    .sm-tel .fa{
+        color: white;
+        line-height: 4rem;
+    }
+    .sm-tel:hover{
+        width: auto;
+        height: 3rem;
+        border-radius: 5px;
+    }
+    .sm-tel:hover .fa{
+        display: none;
+    }
+    .sm-tel:hover span{
+        display: flex;
+        color: white;
+        font-size: 1.5rem;
+        justify-content: center;
+        line-height: 3rem;   
+        font-weight: 900; 
+    }
+    .sm-mail{
+        background: $color-primary-0;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+    .sm-mail .fa{
+        color: white;
+        line-height: 4rem;
+    }
+    .sm-mail:hover{
+        width: auto;
+        height: 3rem;
+        border-radius: 5px;
+        padding: 0 0.5rem 0 0.5rem;
+    }
+    .sm-mail:hover .fa{
+        display: none;
+    }
+    .sm-mail:hover span{
+        display: flex;
+        color: white;
+        font-size: 1.5rem;
+        justify-content: center;
+        line-height: 3rem;   
+        font-weight: 900; 
+    }
+    .sm-tel-mail{
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 3rem;
+    }
+    .sm-tel-mail span{
+        display: none;
+    }
+}

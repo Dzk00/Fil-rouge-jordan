@@ -1,0 +1,20 @@
+
+<div class="home-form-container">
+    {{ form_start(form) }}
+<h2 class="home-form-title">Pour plus de renseignements</h2>
+<div class="home-form-group">
+{{ form_label(form.name) }}
+        {{ form_widget(form.name) }}
+</div>
+<div class="home-form-group">
+{{ form_label(form.email) }}
+        {{ form_widget(form.email) }}
+</div>
+<div class="home-form-group">
+{{ form_label(form.message) }}
+        {{ form_widget(form.message) }}</div>
+<div class="form-btn-submit-container">
+<button type="submit" class="form-btn-submit">Soumettre</button>
+</div>
+    {{ form_end(form) }}
+</div>

@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import '_variables.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+// SOCIALS
+
+.socials-content{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3rem;
+    padding: 2rem 3rem 0 0;
+}
+.socials-content i{
+    font-size: 2rem;
+}
+.tel-mail{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.tel, .mail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+.tel-mail i{
+    font-size: 3rem;
+    color: $black-hover;
+}
+.tel-mail a{
+    font-size: 1.5rem;
+    color: $text-color;
+}
+.tel-mail a:hover{
+    color: $color-primary-0;
+    font-weight: 600;
+}
+@media screen and (max-width: 400px) {
+    .socials-content{
+        display: none;
+    }
+}
+.socials{
+    display: flex;
+    gap: 1.5rem;
+}
+@media screen and (max-width: 600px) {
+    .socials{
+        display: none;
+    }
+    .socials-content{
+        justify-content: center;
+        padding: 2rem 0 0 0;
+    }
+}
+.socials i{
+    font-size: 3rem;
+    color: $color-primary-1;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.socials i:hover{
+    font-size: 4rem;
+}
+// NAVBAR
+
+.main-nav{
+    width: 100%;
+    padding: 40px;
+}
+.nav-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+@media screen and (max-width: 900px) {
+    .nav-container{
+        justify-content: space-between;
+    }
+}
+.nav-title{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    cursor: pointer;
+}
+.nav-title-1{
+    font-size: 4rem;
+    color: $black;
+}
+.nav-title-1::after{
+    content: " Lasne";
+    font-weight: bold;
+    font-size: 50px;
+    margin-right: 2rem;
+}
+@media screen and (max-width: 600px) {
+    .main-nav{
+        padding: 2rem;
+        margin: 3rem 0 3rem 1rem;
+    }
+    .nav-title-1{
+        font-size: 20px;    
+    }
+    .nav-title-1::after{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .nav-title-1{
+        font-size: 3.5rem;    
+    }
+    .nav-title-1::after{
+        font-size: 45px;
+    }
+}
+@media screen and (max-width: 530px) {
+    .nav-title-1{
+        font-size: 2.5rem;    
+    }
+    .nav-title-1::after{
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 440px) {
+    .nav-title-1{
+        font-size: 2rem;    
+    }
+    .nav-title-1::after{
+        font-size: 30px;
+    }
+}
+.nav-logo{
+    display: flex;
+}
+.nav-title img{
+    width: 7.5rem;
+    filter: hue-rotate(180deg);
+}
+@media screen and (max-width: 600px) {
+    .nav-title img{
+        width: 5rem;
+    }
+    
+}
+.nav-link{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-content{
+    display: flex;
+    gap: 3rem;
+}
+@media screen and (max-width: 1300px) {
+    .nav-content{
+        display: none;
+    }
+    .nav-link{
+        justify-content: flex-end;
+    }
+}
+@media screen and (max-width: 900px) {
+    .nav-link{
+        display: none;
+    }
+}
+.nav-bar{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.756);
+    font-weight: 500;
+}
+.nav-bar:hover{
+    color: $color-primary-0;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+.nav-btn{
+    background: $color-primary-1;
+    height: 6rem;
+    width: 18rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-right: 6rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.nav-btn i{
+    color: $white;
+    font-size: 2rem;
+}
+.nav-btn-devis{
+    font-size: 2rem;
+    font-weight: 800;
+    color: $white;
+}
+.nav-btn:hover{
+    background: $color-primary-2;
+}

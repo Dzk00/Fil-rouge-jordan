@@ -1,0 +1,96 @@
+@import '_variables.scss';
+
+.swiper{
+    height: 70vh;
+}
+.swiper-wrapper{
+    padding: 5rem 0 5rem 0;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+    width: 30rem;
+    padding: 5rem;
+    -webkit-box-shadow: 0px 0px 14px -4px $color-primary-1; 
+    box-shadow: 0px 0px 14px -4px $color-primary-0;    
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+@media screen and (max-width: 1360px){
+    .swiper-wrapper{
+        width: auto;
+    }
+    .swiper-slide{
+        width: 25rem;
+    }
+}
+@media screen and (max-width: 1160px){
+    .swiper-wrapper{
+        justify-content: flex-start;
+        margin-left: 2rem;    
+    }
+}
+
+.swiper-slide:hover{
+    transform: scale(1.1);
+    background: $color-primary-1;
+}
+.swiper-slide:hover h3, .swiper-slide:hover p, .swiper-slide:hover i{
+    color: $white;
+}
+.swiper-slide:hover button{
+    border: 1px solid $white;
+}
+.swiper-slide:hover p::first-letter{
+    color: $black;
+}
+
+
+.swiper-slide i{
+    font-size: 8rem;
+    height: 15vh;
+    flex: 1;
+    color: $text-color;
+}
+.swiper-slide h3{
+    font-size: 2.5rem;
+    flex: 0;
+    line-height: 2.5rem;
+    color: $text-color;
+    font-weight: 800;
+}
+.swiper-slide p{
+    text-align: center;
+    font-size: 1.9rem;
+    flex: 2;
+    margin-top: 1.5rem;
+    height: 30vh;
+    color: $text-color;
+    font-weight: 400;
+}
+.swiper-slide p::first-letter{
+    font-size: 2.1rem;
+    color: $color-primary-1;
+    font-weight: 700;
+}
+.swiper-slide button{
+    height: 6rem;
+    width: 5rem;
+    border: 1px solid $color-primary-1;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.swiper-slide button i{
+    font-size: 3rem;
+    line-height: 6rem;
+    color: $color-primary-1;
+}

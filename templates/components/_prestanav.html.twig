@@ -1,0 +1,91 @@
+    <div id="presta-nav"  class="presta-nav">
+        <span id="presta-nav-entreprises" class="presta-nav-title">Entreprises</span>
+        <span id="presta-nav-particuliers" class="presta-nav-title">Particuliers</span>
+        <span id="presta-nav-enfants" class="presta-nav-title">Enfants</span>
+        <span id="presta-nav-associations" class="presta-nav-title">Associations</span>
+    </div>
+<div id="presta-global" class="presta-content-container">
+    <div id="entreprises-content"class="presta-content">
+{% for prestation in prestations %}
+    {% if 1 in prestation.categorie|map(c => c.id) %}
+            <div class="presta-content-inside">
+            <div class="presta-content-inside-left">
+                <img src="{{ asset('images/presta/' ~ prestation.imageName) }}" alt="image_">
+            </div>
+            <div class="presta-content-inside-middle">
+                <h2 class="presta-content-inside-title">{{ prestation.nom}}</h2>
+                <p class="presta-content-inside-text">{{ prestation.descriptionCourte }} </p>
+            </div>
+            <div class="presta-content-inside-right">
+                <a href="{{ path('detail_presta', {'id': prestation.id}) }}"><button class="presta-content-inside-btn">
+                Détails<i class="fa-solid fa-arrow-right"></i>
+                </button></a>
+            </div>
+        </div>
+        {% endif %}
+{% endfor %}
+    </div>
+
+    <div id="particuliers-content" class="presta-content">
+        {% for prestation in prestations %}
+{% if 2 in prestation.categorie|map(c => c.id) %}
+            <div class="presta-content-inside">
+            <div class="presta-content-inside-left">
+                <img src="{{ asset('images/presta/' ~ prestation.imageName) }}" alt="image_">
+            </div>
+            <div class="presta-content-inside-middle">
+                <h2 class="presta-content-inside-title">{{ prestation.nom}}</h2>
+                <p class="presta-content-inside-text">{{ prestation.descriptionCourte }} </p>
+            </div>
+            <div class="presta-content-inside-right">
+                <a href="{{ path('detail_presta', {'id': prestation.id}) }}"><button class="presta-content-inside-btn">
+                Détails<i class="fa-solid fa-arrow-right"></i>
+                </button></a>
+            </div>
+        </div>
+        {% endif %}
+{% endfor %}
+    </div>
+
+    <div id="enfants-content"class="presta-content">
+        {% for prestation in prestations %}
+{% if 3 in prestation.categorie|map(c => c.id) %}
+            <div class="presta-content-inside">
+            <div class="presta-content-inside-left">
+                <img src="{{ asset('images/presta/' ~ prestation.imageName) }}" alt="image_">
+            </div>
+            <div class="presta-content-inside-middle">
+                <h2 class="presta-content-inside-title">{{ prestation.nom}}</h2>
+                <p class="presta-content-inside-text">{{ prestation.descriptionCourte }} </p>
+            </div>
+            <div class="presta-content-inside-right">
+                <a href="{{ path('detail_presta', {'id': prestation.id}) }}"><button class="presta-content-inside-btn">
+                Détails<i class="fa-solid fa-arrow-right"></i>
+                </button></a>
+            </div>
+        </div>
+        {% endif %}
+{% endfor %}
+    </div>
+
+    <div id="associations-content"class="presta-content">
+        {% for prestation in prestations %}
+{% if 4 in prestation.categorie|map(c => c.id) %}
+            <div class="presta-content-inside">
+            <div class="presta-content-inside-left">
+                <img src="{{ asset('images/presta/' ~ prestation.imageName) }}" alt="image_">
+            </div>
+            <div class="presta-content-inside-middle">
+                <h2 class="presta-content-inside-title">{{ prestation.nom}}</h2>
+                <p class="presta-content-inside-text">{{ prestation.descriptionCourte }} </p>
+            </div>
+            <div class="presta-content-inside-right">
+                <a href="{{ path('detail_presta', {'id': prestation.id}) }}"><button class="presta-content-inside-btn">
+                Détails<i class="fa-solid fa-arrow-right"></i>
+                </button></a>
+            </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
